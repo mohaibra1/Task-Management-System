@@ -1,0 +1,7 @@
+type: framework
+content:
+  - Registering users
+  - Creating tasks
+  - Authenticating with JWT
+  - Assigning tasks
+  - Leaving comments
