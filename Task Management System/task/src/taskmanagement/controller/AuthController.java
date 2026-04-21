@@ -35,19 +35,13 @@ public class AuthController {
         var appUser = new AppUser();
         appUser.setUsername(username.toLowerCase());
         appUser.setPassword(passwordEncoder.encode(request.password));
-        appUser.setAuthority("ROLE_USER");
 
         appUserRepository.save(appUser);
 
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/api/tasks")
-    public ResponseEntity<?> tasks(){
-        return ResponseEntity.ok().build();
-    }
 
     record RegistrationRequest(@NotBlank @Pattern(regexp = ".+@.+\\..+") String email,
-                               @NotBlank @Size(min = 6) String password,
-                               String authority) { }
+                               @NotBlank @Size(min = 6) String password) { }
 }

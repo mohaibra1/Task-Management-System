@@ -27,7 +27,10 @@ public class SecurityConfig {
                         .requestMatchers("/actuator/shutdown").permitAll() // required for tests
                         .requestMatchers("/h2-console/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/accounts").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/tasks").hasRole("USER")
+                        .requestMatchers(HttpMethod.POST, "/api/tasks").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/api/tasks/**").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/api/tasks/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/api/tasks/**").authenticated()
                         .anyRequest().denyAll()
                 );
         return http.build();

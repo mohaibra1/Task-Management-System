@@ -15,6 +15,30 @@ files:
     learner_created: false
   - name: test/TestUser.java
     learner_created: false
+  - name: src/taskmanagement/model/Task.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/model/Author.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/repository/TaskRepository.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/service/TaskService.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/repository/AuthorRepository.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/controller/TaskController.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/dto/TaskDTO.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/423/stages/2460/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 21 Apr 2026 20:00:58 UTC"
 record: -1
