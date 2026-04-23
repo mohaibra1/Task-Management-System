@@ -10,10 +10,13 @@ files:
     visible: true
     learner_created: false
   - name: test/ApplicationTests.java
+    visible: true
     learner_created: false
   - name: test/TestTask.java
+    visible: true
     learner_created: false
   - name: test/TestUser.java
+    visible: true
     learner_created: false
 feedback_link: https://hyperskill.org/projects/423/stages/2462/implement#comment
 status: Unchecked

@@ -5,6 +5,9 @@ public class TaskDTO {
     private String id;
     private String title;
     private String description;
+    private String status;
+    private String author;
+    private String assignee;
 
     public String getId() {
         return id;
@@ -46,6 +49,12 @@ public class TaskDTO {
         this.author = author;
     }
 
-    private String status;
-    private String author;
+    public String getAssignee() {
+        return assignee;
+    }
+
+    public void setAssignee(String assignee) {
+        this.assignee = assignee;
+    }
+
 }

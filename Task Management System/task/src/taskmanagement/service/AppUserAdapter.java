@@ -17,7 +17,15 @@ public class AppUserAdapter implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+        // Make sure the role is not null and has a prefix like "ROLE_"
+        // If your database stores "USER", use "ROLE_" + user.getRole()
+        String role = appUser.getAuthority();
+
+        if (role == null || role.isBlank()) {
+            role = "USER"; // Fallback default
+        }
+
+        return List.of(new SimpleGrantedAuthority("ROLE_" + role));
     }
 
     @Override

@@ -29,6 +29,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     runtimeOnly 'com.h2database:h2'
+    // JJWT API
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
+    // JJWT Implementation
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.3'
+    // JJWT Jackson (for JSON parsing)
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.3'
 }
 
 test {

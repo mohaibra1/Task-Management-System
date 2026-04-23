@@ -7,7 +7,7 @@
     <content url="file://$MODULE_DIR$/../../../../../../Task Management System/task/build/tmp/test">
       <sourceFolder url="file://$MODULE_DIR$/../../../../../../Task Management System/task/build/tmp/test" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="jbr-21" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Task_Management_System.Task_Management_System-task-build-tmp.main" />
     <orderEntry type="module" module-name="Task_Management_System.util.main" />

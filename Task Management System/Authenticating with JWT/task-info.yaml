@@ -9,12 +9,45 @@ files:
   - name: build.gradle
     visible: true
     learner_created: false
+  - name: src/taskmanagement/model/Task.java
+    visible: true
+    learner_created: false
+  - name: src/taskmanagement/model/Author.java
+    visible: true
+    learner_created: false
+  - name: src/taskmanagement/repository/TaskRepository.java
+    visible: true
+    learner_created: false
+  - name: src/taskmanagement/service/TaskService.java
+    visible: true
+    learner_created: false
+  - name: src/taskmanagement/repository/AuthorRepository.java
+    visible: true
+    learner_created: false
+  - name: src/taskmanagement/controller/TaskController.java
+    visible: true
+    learner_created: false
+  - name: src/taskmanagement/dto/TaskDTO.java
+    visible: true
+    learner_created: false
   - name: test/ApplicationTests.java
     learner_created: false
   - name: test/TestTask.java
     learner_created: false
   - name: test/TestUser.java
     learner_created: false
+  - name: src/taskmanagement/security/JwtAuthenticationFilter.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/security/JwtService.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/controller/AccountController.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/423/stages/2461/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 23 Apr 2026 21:40:08 UTC"
 record: -1

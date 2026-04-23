@@ -17,11 +17,13 @@ import java.util.List;
 @RequestMapping("/api/tasks")
 public class TaskController {
 
-    @Autowired
-    private TaskService taskService;
+    private final TaskService taskService;
+    private final AuthorRepository authorRepository;
 
-    @Autowired
-    private AuthorRepository authorRepository;
+    public TaskController(TaskService taskService, AuthorRepository authorRepository) {
+        this.taskService = taskService;
+        this.authorRepository = authorRepository;
+    }
 
     @PostMapping
     public ResponseEntity<TaskDTO> createTask(@Valid @RequestBody Task task, Authentication auth) {
