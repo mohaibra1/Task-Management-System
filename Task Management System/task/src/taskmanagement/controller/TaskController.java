@@ -1,7 +1,6 @@
 package taskmanagement.controller;
 
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +11,7 @@ import taskmanagement.repository.AuthorRepository;
 import taskmanagement.service.TaskService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/tasks")
@@ -28,31 +28,64 @@ public class TaskController {
     @PostMapping
     public ResponseEntity<TaskDTO> createTask(@Valid @RequestBody Task task, Authentication auth) {
         String name = auth.getName();
-        Author author;
-        if(authorRepository.findByName(name).isEmpty()) {
-            author = new Author();
+        if (authorRepository.findByName(name).isEmpty()) {
+            Author author = new Author();
             author.setName(name);
             authorRepository.save(author);
         }
-        author = authorRepository.findByName(name).get();
-
-        Task createdTask = taskService.createTask(task.getTitle(),task.getDescription(), author);
-        TaskDTO createdTaskDTO = new TaskDTO();
-        createdTaskDTO.setId(createdTask.getId().toString());
-        createdTaskDTO.setTitle(createdTask.getTitle());
-        createdTaskDTO.setDescription(createdTask.getDescription());
-        createdTaskDTO.setStatus(createdTask.getStatus());
-        createdTaskDTO.setAuthor(createdTask.getCreator().getName());
-
-        return ResponseEntity.ok(createdTaskDTO);
+        Author author = authorRepository.findByName(name).get();
+        Task created = taskService.createTask(task.getTitle(), task.getDescription(), author);
+        return ResponseEntity.ok(taskService.toDTO(created));
     }
 
     @GetMapping
-    public ResponseEntity<List<TaskDTO>> getTasks(@RequestParam(required = false) String author) {
-        if (author != null && !author.isBlank()) {
-            // Requirement: Filter by the provided email
-            return ResponseEntity.ok().body(taskService.getTasksByAuthor(author));
+    public ResponseEntity<List<TaskDTO>> getTasks(
+            @RequestParam(required = false) String author,
+            @RequestParam(required = false) String assignee) {
+
+        if (author != null && assignee != null) {
+            return ResponseEntity.ok(taskService.getTasksByAuthorAndAssignee(author, assignee));
+        } else if (author != null) {
+            return ResponseEntity.ok(taskService.getTasksByAuthor(author));
+        } else if (assignee != null) {
+            return ResponseEntity.ok(taskService.getTasksByAssignee(assignee));
         }
-        return ResponseEntity.ok().body(taskService.getAllTasksSorted());
+        return ResponseEntity.ok(taskService.getAllTasksSorted());
+    }
+
+    @PutMapping("/{taskId}/assign")
+    public ResponseEntity<TaskDTO> assignTask(
+            @PathVariable Long taskId,
+            @RequestBody Map<String, String> body,
+            Authentication auth) {
+
+        String assigneeEmail = body.get("assignee");
+
+        // Validate: must be "none" or a valid email format
+        if (assigneeEmail == null ||
+                (!assigneeEmail.equalsIgnoreCase("none") && !assigneeEmail.matches(".+@.+\\..+"))) {
+            return ResponseEntity.badRequest().build();
+        }
+
+        Task updated = taskService.assignTask(taskId, assigneeEmail, auth.getName());
+        return ResponseEntity.ok(taskService.toDTO(updated));
+    }
+
+    @PutMapping("/{taskId}/status")
+    public ResponseEntity<TaskDTO> updateStatus(
+            @PathVariable Long taskId,
+            @RequestBody Map<String, String> body,
+            Authentication auth) {
+
+        String status = body.get("status");
+        List<String> valid = List.of("CREATED", "IN_PROGRESS", "COMPLETED");
+
+        if (status == null || !valid.contains(status)) {
+            return ResponseEntity.badRequest().build();
+        }
+
+        Task updated = taskService.updateStatus(taskId, status, auth.getName());
+        return ResponseEntity.ok(taskService.toDTO(updated));
     }
 }
+

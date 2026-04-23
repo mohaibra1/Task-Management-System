@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-23T21:39:40.611Z" hostname="MOHAIBRA" time="27.826">
+<testsuite name="ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-23T22:31:52.313Z" hostname="MOHAIBRA" time="29.992">
   <properties/>
-  <testcase name="start" classname="ApplicationTests" time="27.826"/>
+  <testcase name="start" classname="ApplicationTests" time="29.992"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 ?[0;34m
@@ -14,23 +14,23 @@ Start test 1?[0m
 ?[0m?[0;34m
 ?[0m?[0;34m :: Spring Boot ::                (v3.5.9)
 ?[0m?[0;34m
-?[0m?[0;34m2026-04-23T23:39:41.925+02:00  INFO 20752 --- [    Test worker] taskmanagement.Application               : Starting Application using Java 23.0.2 with PID 20752 (started by 32492 in C:\Users\32492\IdeaProjects\Task Management System\Task Management System\task)
-?[0m?[0;34m2026-04-23T23:39:41.936+02:00  INFO 20752 --- [    Test worker] taskmanagement.Application               : No active profile set, falling back to 1 default profile: "default"
-?[0m?[0;34m2026-04-23T23:39:44.388+02:00  INFO 20752 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[0m?[0;34m2026-04-23T23:39:44.503+02:00  INFO 20752 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 3 JPA repository interfaces.
-?[0m?[0;34m2026-04-23T23:39:45.744+02:00  INFO 20752 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8890 (http)
-?[0m?[0;34m2026-04-23T23:39:45.786+02:00  INFO 20752 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2026-04-23T23:39:45.787+02:00  INFO 20752 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-?[0m?[0;34m2026-04-23T23:39:45.902+02:00  INFO 20752 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2026-04-23T23:39:45.905+02:00  INFO 20752 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3855 ms
-?[0m?[0;34m2026-04-23T23:39:46.537+02:00  INFO 20752 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-?[0m?[0;34m2026-04-23T23:39:46.731+02:00  INFO 20752 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
-?[0m?[0;34m2026-04-23T23:39:46.829+02:00  INFO 20752 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-?[0m?[0;34m2026-04-23T23:39:47.432+02:00  INFO 20752 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-?[0m?[0;34m2026-04-23T23:39:47.480+02:00  INFO 20752 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-?[0m?[0;34m2026-04-23T23:39:47.889+02:00  INFO 20752 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:../tms_db user=SA
-?[0m?[0;34m2026-04-23T23:39:47.895+02:00  INFO 20752 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-?[0m?[0;34m2026-04-23T23:39:48.007+02:00  INFO 20752 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+?[0m?[0;34m2026-04-24T00:31:54.054+02:00  INFO 21704 --- [    Test worker] taskmanagement.Application               : Starting Application using Java 23.0.2 with PID 21704 (started by 32492 in C:\Users\32492\IdeaProjects\Task Management System\Task Management System\task)
+?[0m?[0;34m2026-04-24T00:31:54.071+02:00  INFO 21704 --- [    Test worker] taskmanagement.Application               : No active profile set, falling back to 1 default profile: "default"
+?[0m?[0;34m2026-04-24T00:31:57.335+02:00  INFO 21704 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2026-04-24T00:31:57.469+02:00  INFO 21704 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 3 JPA repository interfaces.
+?[0m?[0;34m2026-04-24T00:31:59.010+02:00  INFO 21704 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8890 (http)
+?[0m?[0;34m2026-04-24T00:31:59.052+02:00  INFO 21704 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2026-04-24T00:31:59.053+02:00  INFO 21704 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+?[0m?[0;34m2026-04-24T00:31:59.173+02:00  INFO 21704 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2026-04-24T00:31:59.176+02:00  INFO 21704 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4952 ms
+?[0m?[0;34m2026-04-24T00:31:59.873+02:00  INFO 21704 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2026-04-24T00:32:00.076+02:00  INFO 21704 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+?[0m?[0;34m2026-04-24T00:32:00.178+02:00  INFO 21704 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+?[0m?[0;34m2026-04-24T00:32:00.936+02:00  INFO 21704 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+?[0m?[0;34m2026-04-24T00:32:01.002+02:00  INFO 21704 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+?[0m?[0;34m2026-04-24T00:32:01.408+02:00  INFO 21704 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:../tms_db user=SA
+?[0m?[0;34m2026-04-24T00:32:01.414+02:00  INFO 21704 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+?[0m?[0;34m2026-04-24T00:32:01.553+02:00  INFO 21704 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 ?[0m?[0;34m	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 ?[0m?[0;34m	Database driver: undefined/unknown
 ?[0m?[0;34m	Database version: 2.3.232
@@ -38,18 +38,18 @@ Start test 1?[0m
 ?[0m?[0;34m	Isolation level: undefined/unknown
 ?[0m?[0;34m	Minimum pool size: undefined/unknown
 ?[0m?[0;34m	Maximum pool size: undefined/unknown
-?[0m?[0;34m2026-04-23T23:39:49.456+02:00  INFO 20752 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-?[0m?[0;34m2026-04-23T23:39:49.521+02:00  INFO 20752 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2026-04-23T23:39:50.953+02:00  WARN 20752 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-?[0m?[0;34m2026-04-23T23:39:51.772+02:00  INFO 20752 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
-?[0m?[0;34m2026-04-23T23:39:51.871+02:00  INFO 20752 --- [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-?[0m?[0;34m2026-04-23T23:39:51.874+02:00  WARN 20752 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-?[0m?[0;34m2026-04-23T23:39:52.562+02:00  INFO 20752 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../tms_db'
-?[0m?[0;34m2026-04-23T23:39:52.804+02:00  INFO 20752 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8890 (http) with context path '/'
-?[0m?[0;34m2026-04-23T23:39:52.836+02:00  INFO 20752 --- [    Test worker] taskmanagement.Application               : Started Application in 11.745 seconds (process running for 13.086)
-?[0;34m2026-04-23T23:39:53.554+02:00  INFO 20752 --- [nio-8890-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2026-04-23T23:39:53.555+02:00  INFO 20752 --- [nio-8890-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2026-04-23T23:39:53.555+02:00  INFO 20752 --- [nio-8890-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+?[0m?[0;34m2026-04-24T00:32:03.054+02:00  INFO 21704 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+?[0m?[0;34m2026-04-24T00:32:03.118+02:00  INFO 21704 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2026-04-24T00:32:04.194+02:00  WARN 21704 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2026-04-24T00:32:04.969+02:00  INFO 21704 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+?[0m?[0;34m2026-04-24T00:32:05.052+02:00  INFO 21704 --- [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+?[0m?[0;34m2026-04-24T00:32:05.052+02:00  WARN 21704 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+?[0m?[0;34m2026-04-24T00:32:05.785+02:00  INFO 21704 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../tms_db'
+?[0m?[0;34m2026-04-24T00:32:05.936+02:00  INFO 21704 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8890 (http) with context path '/'
+?[0m?[0;34m2026-04-24T00:32:05.952+02:00  INFO 21704 --- [    Test worker] taskmanagement.Application               : Started Application in 12.774 seconds (process running for 14.732)
+?[0;34m2026-04-24T00:32:06.719+02:00  INFO 21704 --- [nio-8890-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2026-04-24T00:32:06.719+02:00  INFO 21704 --- [nio-8890-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2026-04-24T00:32:06.724+02:00  INFO 21704 --- [nio-8890-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
 ?[0m?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/accounts
 ?[0m?[0;34mRequest body: {"email":"alice@email.com","password":"password"}
@@ -74,42 +74,42 @@ Start test 4?[0m
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 5?[0m
-?[0;34m2026-04-23T23:39:54.405+02:00  WARN 20752 --- [nio-8890-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AuthController.addUser(taskmanagement.controller.AuthController$RegistrationRequest) with 2 errors: [Field error in object 'registrationRequest' on field 'email': rejected value [ ]; codes [NotBlank.registrationRequest.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.email,email]; arguments []; default message [email]]; default message [must not be blank]] [Field error in object 'registrationRequest' on field 'email': rejected value [ ]; codes [Pattern.registrationRequest.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@68243dd,.+@.+\..+]; default message [must match ".+@.+\..+"]] ]
+?[0;34m2026-04-24T00:32:07.587+02:00  WARN 21704 --- [nio-8890-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AccountController.addUser(taskmanagement.controller.AccountController$RegistrationRequest) with 2 errors: [Field error in object 'registrationRequest' on field 'email': rejected value [ ]; codes [NotBlank.registrationRequest.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.email,email]; arguments []; default message [email]]; default message [must not be blank]] [Field error in object 'registrationRequest' on field 'email': rejected value [ ]; codes [Pattern.registrationRequest.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@5669d4c4,.+@.+\..+]; default message [must match ".+@.+\..+"]] ]
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/accounts
 ?[0m?[0;34mRequest body: {"email":" ","password":"password"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 6?[0m
-?[0;34m2026-04-23T23:39:54.479+02:00  WARN 20752 --- [nio-8890-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AuthController.addUser(taskmanagement.controller.AuthController$RegistrationRequest): [Field error in object 'registrationRequest' on field 'email': rejected value [null]; codes [NotBlank.registrationRequest.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.email,email]; arguments []; default message [email]]; default message [must not be blank]] ]
+?[0;34m2026-04-24T00:32:07.661+02:00  WARN 21704 --- [nio-8890-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AccountController.addUser(taskmanagement.controller.AccountController$RegistrationRequest): [Field error in object 'registrationRequest' on field 'email': rejected value [null]; codes [NotBlank.registrationRequest.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.email,email]; arguments []; default message [email]]; default message [must not be blank]] ]
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/accounts
 ?[0m?[0;34mRequest body: {"password":"password"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 7?[0m
-?[0;34m2026-04-23T23:39:54.511+02:00  WARN 20752 --- [io-8890-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AuthController.addUser(taskmanagement.controller.AuthController$RegistrationRequest): [Field error in object 'registrationRequest' on field 'email': rejected value [malformed@email.]; codes [Pattern.registrationRequest.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@68243dd,.+@.+\..+]; default message [must match ".+@.+\..+"]] ]
+?[0;34m2026-04-24T00:32:07.696+02:00  WARN 21704 --- [nio-8890-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AccountController.addUser(taskmanagement.controller.AccountController$RegistrationRequest): [Field error in object 'registrationRequest' on field 'email': rejected value [malformed@email.]; codes [Pattern.registrationRequest.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@5669d4c4,.+@.+\..+]; default message [must match ".+@.+\..+"]] ]
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/accounts
 ?[0m?[0;34mRequest body: {"email":"malformed@email.","password":"password"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 8?[0m
-?[0m?[0;34m2026-04-23T23:39:54.544+02:00  WARN 20752 --- [nio-8890-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AuthController.addUser(taskmanagement.controller.AuthController$RegistrationRequest): [Field error in object 'registrationRequest' on field 'password': rejected value [null]; codes [NotBlank.registrationRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.password,password]; arguments []; default message [password]]; default message [must not be blank]] ]
+?[0;34m2026-04-24T00:32:07.725+02:00  WARN 21704 --- [nio-8890-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AccountController.addUser(taskmanagement.controller.AccountController$RegistrationRequest): [Field error in object 'registrationRequest' on field 'password': rejected value [null]; codes [NotBlank.registrationRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.password,password]; arguments []; default message [password]]; default message [must not be blank]] ]
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/accounts
 ?[0m?[0;34mRequest body: {"email":"test@test.com"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 9?[0m
-?[0;34m2026-04-23T23:39:54.564+02:00  WARN 20752 --- [nio-8890-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AuthController.addUser(taskmanagement.controller.AuthController$RegistrationRequest): [Field error in object 'registrationRequest' on field 'password': rejected value [      ]; codes [NotBlank.registrationRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.password,password]; arguments []; default message [password]]; default message [must not be blank]] ]
+?[0;34m2026-04-24T00:32:07.740+02:00  WARN 21704 --- [io-8890-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AccountController.addUser(taskmanagement.controller.AccountController$RegistrationRequest): [Field error in object 'registrationRequest' on field 'password': rejected value [      ]; codes [NotBlank.registrationRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.password,password]; arguments []; default message [password]]; default message [must not be blank]] ]
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/accounts
 ?[0m?[0;34mRequest body: {"email":"test@test.com","password":"      "}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 10?[0m
-?[0;34m2026-04-23T23:39:54.591+02:00  WARN 20752 --- [nio-8890-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AuthController.addUser(taskmanagement.controller.AuthController$RegistrationRequest): [Field error in object 'registrationRequest' on field 'password': rejected value [12345]; codes [Size.registrationRequest.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.password,password]; arguments []; default message [password],2147483647,6]; default message [size must be between 6 and 2147483647]] ]
+?[0;34m2026-04-24T00:32:07.755+02:00  WARN 21704 --- [nio-8890-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> taskmanagement.controller.AccountController.addUser(taskmanagement.controller.AccountController$RegistrationRequest): [Field error in object 'registrationRequest' on field 'password': rejected value [12345]; codes [Size.registrationRequest.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registrationRequest.password,password]; arguments []; default message [password],2147483647,6]; default message [size must be between 6 and 2147483647]] ]
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/accounts
 ?[0m?[0;34mRequest body: {"email":"test@test.com","password":"12345"}
@@ -158,87 +158,189 @@ Start test 17?[0m
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 18?[0m
-?[0;34m2026-04-23T23:39:55.448+02:00  WARN 20752 --- [nio-8890-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<taskmanagement.dto.TaskDTO> taskmanagement.controller.TaskController.createTask(taskmanagement.model.Task,org.springframework.security.core.Authentication): [Field error in object 'task' on field 'title': rejected value [null]; codes [NotBlank.task.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [task.title,title]; arguments []; default message [title]]; default message [Title cannot be blank]] ]
+?[0;34m2026-04-24T00:32:08.569+02:00  WARN 21704 --- [nio-8890-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<taskmanagement.dto.TaskDTO> taskmanagement.controller.TaskController.createTask(taskmanagement.model.Task,org.springframework.security.core.Authentication): [Field error in object 'task' on field 'title': rejected value [null]; codes [NotBlank.task.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [task.title,title]; arguments []; default message [title]]; default message [Title cannot be blank]] ]
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/tasks
-?[0m?[0;34mRequest body: {"description":"description 3","status":"CREATED","author":"bob@example.com"}
+?[0m?[0;34mRequest body: {"id":"3","description":"description 3","status":"CREATED","author":"bob@example.com"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 19?[0m
-?[0;34m2026-04-23T23:39:55.481+02:00  WARN 20752 --- [nio-8890-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<taskmanagement.dto.TaskDTO> taskmanagement.controller.TaskController.createTask(taskmanagement.model.Task,org.springframework.security.core.Authentication): [Field error in object 'task' on field 'title': rejected value [ ]; codes [NotBlank.task.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [task.title,title]; arguments []; default message [title]]; default message [Title cannot be blank]] ]
+?[0;34m2026-04-24T00:32:08.604+02:00  WARN 21704 --- [nio-8890-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<taskmanagement.dto.TaskDTO> taskmanagement.controller.TaskController.createTask(taskmanagement.model.Task,org.springframework.security.core.Authentication): [Field error in object 'task' on field 'title': rejected value [ ]; codes [NotBlank.task.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [task.title,title]; arguments []; default message [title]]; default message [Title cannot be blank]] ]
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/tasks
-?[0m?[0;34mRequest body: {"title":" ","description":"description 1","status":"CREATED","author":"alice@email.com"}
+?[0m?[0;34mRequest body: {"id":"1","title":" ","description":"description 1","status":"CREATED","author":"alice@email.com"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 20?[0m
-?[0;34m2026-04-23T23:39:55.505+02:00  WARN 20752 --- [nio-8890-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<taskmanagement.dto.TaskDTO> taskmanagement.controller.TaskController.createTask(taskmanagement.model.Task,org.springframework.security.core.Authentication): [Field error in object 'task' on field 'description': rejected value [null]; codes [NotBlank.task.description,NotBlank.description,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [task.description,description]; arguments []; default message [description]]; default message [Description cannot be blank]] ]
+?[0;34m2026-04-24T00:32:08.635+02:00  WARN 21704 --- [nio-8890-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<taskmanagement.dto.TaskDTO> taskmanagement.controller.TaskController.createTask(taskmanagement.model.Task,org.springframework.security.core.Authentication): [Field error in object 'task' on field 'description': rejected value [null]; codes [NotBlank.task.description,NotBlank.description,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [task.description,description]; arguments []; default message [description]]; default message [Description cannot be blank]] ]
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/tasks
-?[0m?[0;34mRequest body: {"title":"title 1","status":"CREATED","author":"alice@email.com"}
+?[0m?[0;34mRequest body: {"id":"1","title":"title 1","status":"CREATED","author":"alice@email.com"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 21?[0m
-?[0m?[0;34m2026-04-23T23:39:55.541+02:00  WARN 20752 --- [nio-8890-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<taskmanagement.dto.TaskDTO> taskmanagement.controller.TaskController.createTask(taskmanagement.model.Task,org.springframework.security.core.Authentication): [Field error in object 'task' on field 'description': rejected value [ ]; codes [NotBlank.task.description,NotBlank.description,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [task.description,description]; arguments []; default message [description]]; default message [Description cannot be blank]] ]
+?[0m?[0;34m2026-04-24T00:32:08.677+02:00  WARN 21704 --- [nio-8890-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<taskmanagement.dto.TaskDTO> taskmanagement.controller.TaskController.createTask(taskmanagement.model.Task,org.springframework.security.core.Authentication): [Field error in object 'task' on field 'description': rejected value [ ]; codes [NotBlank.task.description,NotBlank.description,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [task.description,description]; arguments []; default message [description]]; default message [Description cannot be blank]] ]
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/tasks
-?[0m?[0;34mRequest body: {"title":"title 1","description":" ","status":"CREATED","author":"alice@email.com"}
+?[0m?[0;34mRequest body: {"id":"1","title":"title 1","description":" ","status":"CREATED","author":"alice@email.com"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 22?[0m
 ?[0;34m
-?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks
-?[0m?[0;34mRequest body: 
+?[0m?[0;34mRequest: POST http://localhost:8890/api/tasks
+?[0m?[0;34mRequest body: {"id":"1","title":"title 1","description":"description 1","status":"CREATED","author":"alice@email.com"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 23?[0m
 ?[0;34m
-?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks
-?[0m?[0;34mRequest body: 
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/1/assign
+?[0m?[0;34mRequest body: {"assignee":"bob@example.com"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 24?[0m
 ?[0;34m
-?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks
-?[0m?[0;34mRequest body: 
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/2/assign
+?[0m?[0;34mRequest body: {"assignee":"bob@example.com"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 25?[0m
 ?[0;34m
-?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks
-?[0m?[0;34mRequest body: 
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/1/assign
+?[0m?[0;34mRequest body: {"assignee":"none"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 26?[0m
 ?[0;34m
-?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks?author=alice@email.com
-?[0m?[0;34mRequest body: 
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/3/assign
+?[0m?[0;34mRequest body: {"assignee":"alice@email.com"}
 ?[0m?[0;34m
 ?[0m?[1;31m
 Start test 27?[0m
+?[0;34m
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/1/assign
+?[0m?[0;34mRequest body: {"assignee":"bob@example.com"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 28?[0m
+?[0;34m
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/1/assign
+?[0m?[0;34mRequest body: {"assignee":"05f896ac-86df-4feb-a1c6-35150031e798@test.com"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 29?[0m
+?[0;34m
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/987654321/assign
+?[0m?[0;34mRequest body: {"assignee":"bob@example.com"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 30?[0m
+?[0;34m
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/1/assign
+?[0m?[0;34mRequest body: {"assignee":"bob@example.com"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 31?[0m
+?[0;34m
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/1/status
+?[0m?[0;34mRequest body: {"status":"IN_PROGRESS"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 32?[0m
+?[0;34m
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/2/status
+?[0m?[0;34mRequest body: {"status":"IN_PROGRESS"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 33?[0m
+?[0;34m
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/2/status
+?[0m?[0;34mRequest body: {"status":"COMPLETED"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 34?[0m
+?[0;34m
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/1/status
+?[0m?[0;34mRequest body: {"status":"COMPLETED"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 35?[0m
+?[0;34m
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/98765432/status
+?[0m?[0;34mRequest body: {"status":"COMPLETED"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 36?[0m
+?[0;34m
+?[0m?[0;34mRequest: PUT http://localhost:8890/api/tasks/1/status
+?[0m?[0;34mRequest body: {"status":"COMPLETED"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 37?[0m
+?[0;34m
+?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks
+?[0m?[0;34mRequest body: 
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 38?[0m
+?[0;34m
+?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks
+?[0m?[0;34mRequest body: 
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 39?[0m
+?[0;34m
+?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks
+?[0m?[0;34mRequest body: 
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 40?[0m
 ?[0;34m
 ?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks?author=alice@email.com
 ?[0m?[0;34mRequest body: 
 ?[0m?[0;34m
 ?[0m?[1;31m
-Start test 28?[0m
+Start test 41?[0m
+?[0;34m
+?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks?author=alice@email.com
+?[0m?[0;34mRequest body: 
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 42?[0m
 ?[0;34m
 ?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks?author=bob@example.com
 ?[0m?[0;34mRequest body: 
 ?[0m?[0;34m
 ?[0m?[1;31m
-Start test 29?[0m
+Start test 43?[0m
 ?[0;34m
 ?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks?author=unknown
 ?[0m?[0;34mRequest body: 
 ?[0m?[0;34m
 ?[0m?[1;31m
-Start test 30?[0m
-?[0;34m2026-04-23T23:39:56.374+02:00  INFO 20752 --- [       Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-?[0;34m2026-04-23T23:39:56.381+02:00  INFO 20752 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-?[0m?[0;34m2026-04-23T23:39:56.391+02:00  INFO 20752 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2026-04-23T23:39:56.391+02:00  INFO 20752 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-?[0m?[0;34m2026-04-23T23:39:56.436+02:00  INFO 20752 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+Start test 44?[0m
+?[0;34m
+?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks?assignee=unknown
+?[0m?[0;34mRequest body: 
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 45?[0m
+?[0;34m
+?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks?author=alice@email.com&assignee=bob@example.com
+?[0m?[0;34mRequest body: 
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 46?[0m
+?[0;34m
+?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks?author=bob@example.com&assignee=alice@email.com
+?[0m?[0;34mRequest body: 
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 47?[0m
+?[0;34m2026-04-24T00:32:10.304+02:00  INFO 21704 --- [       Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+?[0;34m2026-04-24T00:32:10.320+02:00  INFO 21704 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+?[0m?[0;34m2026-04-24T00:32:10.326+02:00  INFO 21704 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2026-04-24T00:32:10.340+02:00  INFO 21704 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+?[0m?[0;34m2026-04-24T00:32:10.418+02:00  INFO 21704 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 ?[0;34m
 ?[0m?[0;34m  .   ____          _            __ _ _
 ?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -249,22 +351,22 @@ Start test 30?[0m
 ?[0m?[0;34m
 ?[0m?[0;34m :: Spring Boot ::                (v3.5.9)
 ?[0m?[0;34m
-?[0m?[0;34m2026-04-23T23:40:06.496+02:00  INFO 20752 --- [    Test worker] taskmanagement.Application               : Starting Application using Java 23.0.2 with PID 20752 (started by 32492 in C:\Users\32492\IdeaProjects\Task Management System\Task Management System\task)
-?[0m?[0;34m2026-04-23T23:40:06.496+02:00  INFO 20752 --- [    Test worker] taskmanagement.Application               : No active profile set, falling back to 1 default profile: "default"
-?[0m?[0;34m2026-04-23T23:40:07.191+02:00  INFO 20752 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[0m?[0;34m2026-04-23T23:40:07.229+02:00  INFO 20752 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
-?[0m?[0;34m2026-04-23T23:40:07.404+02:00  INFO 20752 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8890 (http)
-?[0m?[0;34m2026-04-23T23:40:07.407+02:00  INFO 20752 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2026-04-23T23:40:07.408+02:00  INFO 20752 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-?[0m?[0;34m2026-04-23T23:40:07.455+02:00  INFO 20752 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2026-04-23T23:40:07.455+02:00  INFO 20752 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 954 ms
-?[0m?[0;34m2026-04-23T23:40:07.612+02:00  INFO 20752 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-?[0m?[0;34m2026-04-23T23:40:07.616+02:00  INFO 20752 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-?[0m?[0;34m2026-04-23T23:40:07.638+02:00  INFO 20752 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-?[0m?[0;34m2026-04-23T23:40:07.638+02:00  INFO 20752 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-?[0m?[0;34m2026-04-23T23:40:07.674+02:00  INFO 20752 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:file:../tms_db user=SA
-?[0m?[0;34m2026-04-23T23:40:07.676+02:00  INFO 20752 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-?[0m?[0;34m2026-04-23T23:40:07.678+02:00  INFO 20752 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+?[0m?[0;34m2026-04-24T00:32:20.527+02:00  INFO 21704 --- [    Test worker] taskmanagement.Application               : Starting Application using Java 23.0.2 with PID 21704 (started by 32492 in C:\Users\32492\IdeaProjects\Task Management System\Task Management System\task)
+?[0m?[0;34m2026-04-24T00:32:20.527+02:00  INFO 21704 --- [    Test worker] taskmanagement.Application               : No active profile set, falling back to 1 default profile: "default"
+?[0m?[0;34m2026-04-24T00:32:21.146+02:00  INFO 21704 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2026-04-24T00:32:21.170+02:00  INFO 21704 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+?[0m?[0;34m2026-04-24T00:32:21.301+02:00  INFO 21704 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8890 (http)
+?[0m?[0;34m2026-04-24T00:32:21.301+02:00  INFO 21704 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2026-04-24T00:32:21.301+02:00  INFO 21704 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+?[0m?[0;34m2026-04-24T00:32:21.338+02:00  INFO 21704 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2026-04-24T00:32:21.338+02:00  INFO 21704 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 808 ms
+?[0m?[0;34m2026-04-24T00:32:21.443+02:00  INFO 21704 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2026-04-24T00:32:21.449+02:00  INFO 21704 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+?[0m?[0;34m2026-04-24T00:32:21.472+02:00  INFO 21704 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+?[0m?[0;34m2026-04-24T00:32:21.472+02:00  INFO 21704 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+?[0m?[0;34m2026-04-24T00:32:21.502+02:00  INFO 21704 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:file:../tms_db user=SA
+?[0m?[0;34m2026-04-24T00:32:21.502+02:00  INFO 21704 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+?[0m?[0;34m2026-04-24T00:32:21.505+02:00  INFO 21704 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 ?[0m?[0;34m	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
 ?[0m?[0;34m	Database driver: undefined/unknown
 ?[0m?[0;34m	Database version: 2.3.232
@@ -272,26 +374,32 @@ Start test 30?[0m
 ?[0m?[0;34m	Isolation level: undefined/unknown
 ?[0m?[0;34m	Minimum pool size: undefined/unknown
 ?[0m?[0;34m	Maximum pool size: undefined/unknown
-?[0m?[0;34m2026-04-23T23:40:07.754+02:00  INFO 20752 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-?[0m?[0;34m2026-04-23T23:40:07.774+02:00  INFO 20752 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2026-04-23T23:40:07.854+02:00  WARN 20752 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-?[0m?[0;34m2026-04-23T23:40:08.007+02:00  INFO 20752 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
-?[0m?[0;34m2026-04-23T23:40:08.039+02:00  INFO 20752 --- [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-?[0m?[0;34m2026-04-23T23:40:08.039+02:00  WARN 20752 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-?[0m?[0;34m2026-04-23T23:40:08.156+02:00  INFO 20752 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../tms_db'
-?[0m?[0;34m2026-04-23T23:40:08.194+02:00  INFO 20752 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8890 (http) with context path '/'
-?[0m?[0;34m2026-04-23T23:40:08.205+02:00  INFO 20752 --- [    Test worker] taskmanagement.Application               : Started Application in 1.751 seconds (process running for 28.455)
+?[0m?[0;34m2026-04-24T00:32:21.579+02:00  INFO 21704 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+?[0m?[0;34m2026-04-24T00:32:21.597+02:00  INFO 21704 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2026-04-24T00:32:21.685+02:00  WARN 21704 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2026-04-24T00:32:21.844+02:00  INFO 21704 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+?[0m?[0;34m2026-04-24T00:32:21.869+02:00  INFO 21704 --- [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+?[0m?[0;34m2026-04-24T00:32:21.869+02:00  WARN 21704 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+?[0m?[0;34m2026-04-24T00:32:21.973+02:00  INFO 21704 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../tms_db'
+?[0m?[0;34m2026-04-24T00:32:22.006+02:00  INFO 21704 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8890 (http) with context path '/'
+?[0m?[0;34m2026-04-24T00:32:22.011+02:00  INFO 21704 --- [    Test worker] taskmanagement.Application               : Started Application in 1.523 seconds (process running for 30.784)
 ?[0m?[1;31m
-Start test 31?[0m
-?[0;34m2026-04-23T23:40:08.212+02:00  INFO 20752 --- [nio-8890-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2026-04-23T23:40:08.212+02:00  INFO 20752 --- [nio-8890-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2026-04-23T23:40:08.212+02:00  INFO 20752 --- [nio-8890-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+Start test 48?[0m
+?[0;34m2026-04-24T00:32:22.028+02:00  INFO 21704 --- [nio-8890-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2026-04-24T00:32:22.028+02:00  INFO 21704 --- [nio-8890-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2026-04-24T00:32:22.034+02:00  INFO 21704 --- [nio-8890-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+?[0;34m
+?[0m?[0;34mRequest: POST http://localhost:8890/api/accounts
+?[0m?[0;34mRequest body: {"email":"alice@email.com","password":"password","token":"eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGljZUBlbWFpbC5jb20iLCJpYXQiOjE3NzY5ODM1MjgsImV4cCI6MTc3Njk4NzEyOH0.ZJI0qC3ZvByd8c0a2fyAIBH2fcvl-RgoDOu2CXcFr8lM1rzEajjzFMA0io_EkLCn"}
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 49?[0m
 ?[0;34m
 ?[0m?[0;34mRequest: POST http://localhost:8890/api/auth/token
 ?[0m?[0;34mRequest body: 
 ?[0m?[0;34m
 ?[0m?[1;31m
-Start test 32?[0m
+Start test 50?[0m
 ?[0;34m
 ?[0m?[0;34mRequest: GET http://localhost:8890/api/tasks
 ?[0m?[0;34mRequest body: 

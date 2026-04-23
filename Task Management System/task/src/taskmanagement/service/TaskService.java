@@ -1,74 +1,101 @@
 package taskmanagement.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 import taskmanagement.dto.TaskDTO;
 import taskmanagement.model.Author;
 import taskmanagement.model.Task;
 import taskmanagement.repository.AuthorRepository;
 import taskmanagement.repository.TaskRepository;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class TaskService {
 
-    @Autowired
-    private TaskRepository taskRepository;
+    private final TaskRepository taskRepository;
+    private final AuthorRepository authorRepository;
 
-    @Autowired
-    private AuthorRepository authorRepository;
+    public TaskService(TaskRepository taskRepository, AuthorRepository authorRepository) {
+        this.taskRepository = taskRepository;
+        this.authorRepository = authorRepository;
+    }
 
-    /**
-     * Requirement: Any authenticated user can create a task.
-     * The logged-in user is automatically set as the 'creator'.
-     */
-    public Task createTask(String title, String description, Author owner) {
-        // 1. Get the current logged-in username from Spring Security context
-        String currentUsername = SecurityContextHolder.getContext().getAuthentication().getName();
-
-        // 2. Find the Author entity for that username (creator)
-        Author creator = authorRepository.findByName(currentUsername)
-                .orElseThrow(() -> new RuntimeException("Logged-in user not found"));
-
+    public Task createTask(String title, String description, Author author) {
         Task task = new Task();
         task.setTitle(title);
         task.setDescription(description);
         task.setStatus("CREATED");
-        task.setCreator(creator); // Authenticated user is the creator
-        task.setOwner(owner);     // Provided user is the owner
+        task.setCreator(author);
+        task.setOwner(null);
+        return taskRepository.save(task);
+    }
+
+    public Task assignTask(Long taskId, String assigneeEmail, String requesterName) {
+        Task task = taskRepository.findById(taskId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Task not found"));
+
+        if (!task.getCreator().getName().equalsIgnoreCase(requesterName)) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Only the author can assign tasks");
+        }
+
+        if ("none".equalsIgnoreCase(assigneeEmail)) {
+            task.setOwner(null);
+        } else {
+            Author assignee = authorRepository.findByName(assigneeEmail.toLowerCase())
+                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Assignee not found"));
+            task.setOwner(assignee);
+        }
 
         return taskRepository.save(task);
     }
 
-    /**
-     * Requirement: Arrange the list so most recent tasks show up first.
-     */
-    public List<TaskDTO> getAllTasksSorted() {
-        List<Task> tasks =  taskRepository.findAllByOrderByCreatedAtDesc();
-        return convertToDTO(tasks);
-    }
+    public Task updateStatus(Long taskId, String newStatus, String requesterName) {
+        Task task = taskRepository.findById(taskId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Task not found"));
 
-    public List<TaskDTO> getTasksByAuthor(String email) {
-        List<Task> tasks = taskRepository.findByCreatorNameOrderByCreatedAtDesc(email);
-        return convertToDTO(tasks);
-    }
+        boolean isAuthor = task.getCreator().getName().equalsIgnoreCase(requesterName);
+        boolean isAssignee = task.getOwner() != null &&
+                task.getOwner().getName().equalsIgnoreCase(requesterName);
 
-    public List<TaskDTO> convertToDTO(List<Task> tasks) {
-        List<TaskDTO>  taskDTOs = new ArrayList<>();
-        for(Task createdTask : tasks) {
-            TaskDTO createdTaskDTO = new TaskDTO();
-            createdTaskDTO.setId(createdTask.getId().toString());
-            createdTaskDTO.setTitle(createdTask.getTitle());
-            createdTaskDTO.setDescription(createdTask.getDescription());
-            createdTaskDTO.setStatus(createdTask.getStatus());
-            createdTaskDTO.setAuthor(createdTask.getCreator().getName());
-
-            taskDTOs.add(createdTaskDTO);
+        if (!isAuthor && !isAssignee) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Not authorized to change status");
         }
-        return taskDTOs;
+
+        task.setStatus(newStatus);
+        return taskRepository.save(task);
+    }
+
+    public List<TaskDTO> getAllTasksSorted() {
+        return taskRepository.findAllByOrderByIdDesc()
+                .stream().map(this::toDTO).toList();
+    }
+
+    public List<TaskDTO> getTasksByAuthor(String author) {
+        return taskRepository.findByCreatorNameIgnoreCaseOrderByIdDesc(author)
+                .stream().map(this::toDTO).toList();
+    }
+
+    public List<TaskDTO> getTasksByAssignee(String assignee) {
+        return taskRepository.findByOwnerNameIgnoreCaseOrderByIdDesc(assignee)
+                .stream().map(this::toDTO).toList();
+    }
+
+    public List<TaskDTO> getTasksByAuthorAndAssignee(String author, String assignee) {
+        return taskRepository.findByCreatorNameIgnoreCaseAndOwnerNameIgnoreCaseOrderByIdDesc(author, assignee)
+                .stream().map(this::toDTO).toList();
+    }
+
+    public TaskDTO toDTO(Task task) {
+        TaskDTO dto = new TaskDTO();
+        dto.setId(task.getId().toString());
+        dto.setTitle(task.getTitle());
+        dto.setDescription(task.getDescription());
+        dto.setStatus(task.getStatus());
+        dto.setAuthor(task.getCreator().getName());
+        dto.setAssignee(task.getOwner() != null ? task.getOwner().getName() : "none");
+        return dto;
     }
 }
+

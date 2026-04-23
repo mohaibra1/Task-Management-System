@@ -15,4 +15,9 @@ public interface TaskRepository extends JpaRepository<Task, Long> {
      */
     List<Task> findAllByOrderByCreatedAtDesc();
     List<Task> findByCreatorNameOrderByCreatedAtDesc(String email);
+
+    List<Task> findAllByOrderByIdDesc();
+    List<Task> findByCreatorNameIgnoreCaseOrderByIdDesc(String name);
+    List<Task> findByOwnerNameIgnoreCaseOrderByIdDesc(String name);
+    List<Task> findByCreatorNameIgnoreCaseAndOwnerNameIgnoreCaseOrderByIdDesc(String author, String owner);
 }
