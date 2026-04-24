@@ -4,22 +4,27 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import taskmanagement.dto.TaskDTO;
+import taskmanagement.dto.TaskListDTO;
 import taskmanagement.model.Author;
 import taskmanagement.model.Task;
 import taskmanagement.repository.AuthorRepository;
+import taskmanagement.repository.CommentRepository;
 import taskmanagement.repository.TaskRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TaskService {
 
     private final TaskRepository taskRepository;
     private final AuthorRepository authorRepository;
+    private final CommentRepository commentRepository;
 
-    public TaskService(TaskRepository taskRepository, AuthorRepository authorRepository) {
+    public TaskService(TaskRepository taskRepository, AuthorRepository authorRepository, CommentRepository commentRepository) {
         this.taskRepository = taskRepository;
         this.authorRepository = authorRepository;
+        this.commentRepository = commentRepository;
     }
 
     public Task createTask(String title, String description, Author author) {
@@ -30,6 +35,10 @@ public class TaskService {
         task.setCreator(author);
         task.setOwner(null);
         return taskRepository.save(task);
+    }
+
+    public Optional<Task> findTaskById(Long taskId) {
+        return taskRepository.findById(taskId);
     }
 
     public Task assignTask(Long taskId, String assigneeEmail, String requesterName) {
@@ -67,25 +76,27 @@ public class TaskService {
         return taskRepository.save(task);
     }
 
-    public List<TaskDTO> getAllTasksSorted() {
+    public List<TaskListDTO> getAllTasksSorted() {
         return taskRepository.findAllByOrderByIdDesc()
-                .stream().map(this::toDTO).toList();
+                .stream().map(this::toListDTO).toList();
     }
 
-    public List<TaskDTO> getTasksByAuthor(String author) {
+    public List<TaskListDTO> getTasksByAuthor(String author) {
         return taskRepository.findByCreatorNameIgnoreCaseOrderByIdDesc(author)
-                .stream().map(this::toDTO).toList();
+                .stream().map(this::toListDTO).toList();
     }
 
-    public List<TaskDTO> getTasksByAssignee(String assignee) {
+    public List<TaskListDTO> getTasksByAssignee(String assignee) {
         return taskRepository.findByOwnerNameIgnoreCaseOrderByIdDesc(assignee)
-                .stream().map(this::toDTO).toList();
+                .stream().map(this::toListDTO).toList();
     }
 
-    public List<TaskDTO> getTasksByAuthorAndAssignee(String author, String assignee) {
+    public List<TaskListDTO> getTasksByAuthorAndAssignee(String author, String assignee) {
         return taskRepository.findByCreatorNameIgnoreCaseAndOwnerNameIgnoreCaseOrderByIdDesc(author, assignee)
-                .stream().map(this::toDTO).toList();
+                .stream().map(this::toListDTO).toList();
     }
+
+
 
     public TaskDTO toDTO(Task task) {
         TaskDTO dto = new TaskDTO();
@@ -95,6 +106,18 @@ public class TaskService {
         dto.setStatus(task.getStatus());
         dto.setAuthor(task.getCreator().getName());
         dto.setAssignee(task.getOwner() != null ? task.getOwner().getName() : "none");
+        return dto;
+    }
+
+    public TaskListDTO toListDTO(Task task) {
+        TaskListDTO dto = new TaskListDTO();
+        dto.setId(task.getId().toString());
+        dto.setTitle(task.getTitle());
+        dto.setDescription(task.getDescription());
+        dto.setStatus(task.getStatus());
+        dto.setAuthor(task.getCreator().getName());
+        dto.setAssignee(task.getOwner() != null ? task.getOwner().getName() : "none");
+        dto.setTotal_comments(commentRepository.countByTaskId(task.getId()));
         return dto;
     }
 }

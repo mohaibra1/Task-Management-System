@@ -12,15 +12,31 @@ files:
   - name: test/ApplicationTests.java
     visible: true
     learner_created: false
-  - name: test/TestComment.java
-    visible: true
-    learner_created: false
   - name: test/TestTask.java
     visible: true
     learner_created: false
   - name: test/TestUser.java
     visible: true
     learner_created: false
+  - name: src/taskmanagement/model/Comment.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/repository/CommentRepository.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/dto/CommentDTO.java
+    visible: true
+    learner_created: true
+  - name: test/TestComment.java
+    visible: true
+    learner_created: true
+  - name: src/taskmanagement/dto/TaskListDTO.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/423/stages/2463/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
+    to continue learning.
+  time: "Fri, 24 Apr 2026 13:29:20 UTC"
 record: -1

@@ -56,5 +56,4 @@ public class TaskDTO {
     public void setAssignee(String assignee) {
         this.assignee = assignee;
     }
-
 }

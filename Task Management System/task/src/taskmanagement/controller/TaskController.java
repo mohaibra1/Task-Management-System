@@ -4,14 +4,19 @@ import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+import taskmanagement.dto.CommentDTO;
 import taskmanagement.dto.TaskDTO;
+import taskmanagement.dto.TaskListDTO;
 import taskmanagement.model.Author;
+import taskmanagement.model.Comment;
 import taskmanagement.model.Task;
 import taskmanagement.repository.AuthorRepository;
+import taskmanagement.repository.CommentRepository;
 import taskmanagement.service.TaskService;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/tasks")
@@ -19,10 +24,12 @@ public class TaskController {
 
     private final TaskService taskService;
     private final AuthorRepository authorRepository;
+    private final CommentRepository commentRepository;
 
-    public TaskController(TaskService taskService, AuthorRepository authorRepository) {
+    public TaskController(TaskService taskService, AuthorRepository authorRepository, CommentRepository commentRepository) {
         this.taskService = taskService;
         this.authorRepository = authorRepository;
+        this.commentRepository = commentRepository;
     }
 
     @PostMapping
@@ -39,7 +46,7 @@ public class TaskController {
     }
 
     @GetMapping
-    public ResponseEntity<List<TaskDTO>> getTasks(
+    public ResponseEntity<List<TaskListDTO>> getTasks(
             @RequestParam(required = false) String author,
             @RequestParam(required = false) String assignee) {
 
@@ -86,6 +93,46 @@ public class TaskController {
 
         Task updated = taskService.updateStatus(taskId, status, auth.getName());
         return ResponseEntity.ok(taskService.toDTO(updated));
+    }
+
+    @PostMapping("{taskId}/comments")
+    public ResponseEntity<?> postComment(@PathVariable Long taskId,
+                                        @Valid @RequestBody Map<String, String> body,
+                                        Authentication auth){
+        String text = body.get("text");
+
+        if(text == null || text.isBlank()){
+            return ResponseEntity.badRequest().build();
+        }
+        if (taskService.findTaskById(taskId).isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Comment comment = new Comment();
+        comment.setText(text);
+        comment.setTaskId(taskId);
+        comment.setAuthor(auth.getName());
+        commentRepository.save(comment);
+
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("{taskId}/comments")
+    public ResponseEntity<List<CommentDTO>>  getComments(@PathVariable Long taskId){
+        if(taskService.findTaskById(taskId).isEmpty()){
+            return  ResponseEntity.notFound().build();
+        }
+        List<CommentDTO> comments = commentRepository.findByTaskIdOrderByIdDesc(taskId)
+                .stream()
+                .map(c -> {
+                    CommentDTO dto = new CommentDTO();
+                    dto.setId(c.getId().toString());
+                    dto.setTask_id(c.getTaskId().toString());
+                    dto.setText(c.getText());
+                    dto.setAuthor(c.getAuthor().toString());
+                    return dto;
+                }).toList();
+        return ResponseEntity.ok(comments);
     }
 }
 
